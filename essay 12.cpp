@@ -1,0 +1,27 @@
+#include <stdio.h>
+int main() {
+  int arr1[100], arr2[100], arr3[200];
+  int n1, n2, n3, i, j;
+  printf("Enter the number of elements in the first array: ");
+  scanf("%d", &n1);
+  printf("Enter %d elements of the first array: ", n1);
+  for (i = 0; i < n1; i++) {
+    scanf("%d", &arr1[i]);
+  }
+  printf("Enter the number of elements in the second array: ");
+  scanf("%d", &n2);
+  printf("Enter %d elements of the second array: ", n2);
+  for (i = 0; i < n2; i++) {
+    scanf("%d", &arr2[i]);
+  }for (i = 0; i < n1; i++) {
+    arr3[i] = arr1[i];
+  }
+  for (j = 0; j < n2; j++) {
+    arr3[i + j] = arr2[j];
+  }  n3 = n1 + n2;
+  printf("Array after concatenation: ");
+  for (i = 0; i < n3; i++) {
+    printf("%d ", arr3[i]);
+  }
+  return 0;
+}
